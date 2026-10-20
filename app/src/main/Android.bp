@@ -26,7 +26,6 @@ android_app {
         "kotlinx-coroutines-android",
         "gson-prebuilt-jar-2.9.1",
         "hilt_android",
-        "custom-preference",
     ],
     kotlincflags: [
         "-opt-in=kotlin.Experimental",
@@ -37,9 +36,13 @@ android_app {
     ],
 
     required: [
-        "ANGLE",
         "privapp_whitelist_com.android.gamespace.xml"
     ],
+}
+
+java_import {
+    name: "gson-prebuilt-jar-2.9.1",
+    jars: ["libs/gson-2.9.1.jar"],
 }
 
 prebuilt_etc_xml {
