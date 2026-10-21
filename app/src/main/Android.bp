@@ -24,7 +24,7 @@ android_app {
         "com.google.android.material_material",
         "kotlin-stdlib",
         "kotlinx-coroutines-android",
-        "gson-prebuilt-jar-2.9.1",
+        "gamespace-gson-2.9.1",
         "hilt_android",
     ],
     kotlincflags: [
@@ -38,6 +38,11 @@ android_app {
     required: [
         "privapp_whitelist_com.android.gamespace.xml"
     ],
+}
+
+java_import {
+    name: "gamespace-gson-2.9.1",
+    jars: ["libs/gson-2.9.1.jar"],
 }
 
 prebuilt_etc_xml {
